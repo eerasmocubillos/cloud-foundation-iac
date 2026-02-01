@@ -26,17 +26,27 @@ This repository serves as the core infrastructure layer for the Cloud/DevOps Roa
 
 ### Step-by-Step Execution
 1. Initialize LocalStack:
+```bash
    docker run -d -p 4566:4566 localstack/localstack
+   ```
 
 2. Initialize Terraform:
+```bash
    terraform init
+   ```
 
 3. Execution Plan:
+```bash
    terraform plan
+   ```
 
 4. Apply Infrastructure:
+```bash
    terraform apply -auto-approve
+   ```
 
 ## 🔍 Validation
 Verify the infrastructure state via the AWS CLI:
+```bash
 aws --endpoint-url=http://localhost:4566 s3 ls
+```
